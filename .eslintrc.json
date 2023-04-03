@@ -27,5 +27,13 @@
         "endOfLine": "auto"
       }
     ]
+  },
+  "settings": {
+    "import/resolve": {
+      "node": {
+        "extension": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
   }
 }
