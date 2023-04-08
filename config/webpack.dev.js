@@ -1,5 +1,5 @@
-const { merge } = require('webpack-merge');
-const common = require('./webpack.common');
+const { merge } = require('webpack-merge')
+const common = require('./webpack.common')
 
 module.exports = merge(common, {
   mode: 'development',
@@ -20,8 +20,26 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/i,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                exportLocalsConvention: function (name) {
+                  return [
+                    name.replace(/-/g, '-'),
+                    // dashesCamelCase
+                    name.replace(/-+(\w)/g, (match, firstLetter) => firstLetter.toUpperCase()),
+                  ]
+                },
+              },
+            },
+          },
+        ],
       },
     ],
   },
-});
+})

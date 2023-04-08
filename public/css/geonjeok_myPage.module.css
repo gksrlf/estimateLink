@@ -395,8 +395,10 @@ button, input, select, textarea {
 }
 
 .myPage__completeBtn__wrap { 
-    width: 284px;
+    width: 280px;
     margin: 100px auto;
+    line-height: 0;
+    font-size: 0;
 }
 .btn__complete {
     border: none;

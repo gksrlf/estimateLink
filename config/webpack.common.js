@@ -1,6 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
-const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+const webpack = require('webpack')
 // const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 // BundleAnalyzer는 Bundle 최적화 용도로 보통 저는 사용합니다.
 
@@ -26,7 +26,8 @@ module.exports = {
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '../src/'),
+      '@style': path.resolve(__dirname, '../public/css'),
     },
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
   },
-};
+}

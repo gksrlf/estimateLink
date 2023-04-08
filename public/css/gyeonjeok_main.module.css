@@ -5,23 +5,14 @@
     src: url('https:///cdn.jsdelivr.net/korean-webfonts/1/orgs/othrs/kywa/Youth/Youth.woff2') format('woff2'),
     url('https:///cdn.jsdelivr.net/korean-webfonts/1/orgs/othrs/kywa/Youth/Youth.woff') format('woff');
 }
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
 
 body {
     color: #303030;
     font-family: 'Noto Sans KR', sans-serif;
-    letter-spacing: -.3px;
+    oletter-spacing: -.3px;
 }
-
-button, input, select, textarea {
-    font-family: 'Noto Sans KR',sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: #a4a4a4;
-    letter-spacing: -.3px;
-}
-
 /* 헤더 영역 */
 .header-con {
     box-sizing: border-box;
@@ -53,6 +44,7 @@ button, input, select, textarea {
 }
 
 /* 헤더 토글버튼 */
+.m_toggle { display: none; }
 .toggle {
     position: relative;
     left: 50%;
@@ -116,10 +108,7 @@ button, input, select, textarea {
     
     border-radius:20px;
 }
- 
-.toggle__input {
-    /* transition:.2s -.1s; */
-}
+
 .toggle__input:checked {
     background-color:#fff;
 }
@@ -129,15 +118,12 @@ button, input, select, textarea {
 }
 .toggle__input:checked:after {
     color:#A4A4A4;
-    /* transition: color .2s; */
 }
 .toggle__input:checked+label {
     left:6px;
     right:126px;
 
     background:#FF773D;
-    
-    /* transition: left .2s, right .2s .1s; */
 }
 
 .toggle__input:not(:checked) {
@@ -147,7 +133,6 @@ button, input, select, textarea {
 
 .toggle__input:not(:checked):before {
     color:#A4A4A4;
-    /* transition: color .2s; */
 }
 .toggle__input:not(:checked):after {
     color:#fff;
@@ -157,8 +142,6 @@ button, input, select, textarea {
     left:126px;
     right:6px;
     background:#FF773D;
-    
-    /* transition: left .2s .1s, right .2s; */
 }
 
 .login-wrap__btn {
@@ -183,186 +166,79 @@ button, input, select, textarea {
     line-height: 50px;
 }
 
+
 /* 컨텐츠 영역 */
 .contents {
-    width: 496px;
-    margin: 100px auto 100px auto;
+    margin-top: 115px;
+    margin-bottom: 200px;
 }
-.login__box-wrap {
+.contents__slogan {
+    font-family: 'Youth';
+    font-size: 32px;
+    text-align: center;
+    line-height: 100px;
+}
+.contetns__main-icons {
+    width: 80%;
     background-color: #fff;
-    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.16)
+    border-radius: 40px;
+
+    /* backdrop-filter: blur(8px) brightness(0) grayscale(77%); */
+    box-shadow: 0px 6px 20px 8px rgba(65,21,2,0.16)
     , inset 1px 2px 10px 8px rgb(255, 255, 255);
-    border-radius: 16px;
-    padding: 24px 32px 36px 32px;
-}
-.login__box > h1 {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 36px;
-    text-align: center;
-    padding-bottom: 36px;
-}
-.login__id-wrap {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 24px;
-}
-.login__pasword-container {
-    padding-bottom: 24px;
-}
-.login__password-wrap {
-    position: relative;
-    overflow: hidden;
-}
-.login__password-wrap.fCheck {
-    padding-bottom: 8px;
-}
-.input__text_id, .input__text_password, .input__text_passwordCheck {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 50px;
-    padding: 0 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    color: #202020;
-}
-.phone-certification-wrap {
-    padding-bottom: 24px;
-}
-.business-num-wrap {
-    padding-bottom: 32px;
-}
-.phone-certification-wrap > h2, .business-num-wrap > h2 {
-    padding-bottom: 12px;
-}
-.input__text_phone, .input__text_businessNum {
-    position: relative;
-    z-index: 1;
-    width: 304px;
-    height: 50px;
-    padding: 0 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    color: #202020;
-    margin-right: 4px;
-}
 
-.error {
-    border: 1px solid #FF2F20;
-    background-color: #fff5f3;
-}
-.error_message {
-    font-size: 13px;
-    color: #FF2F20;
-    display: block;
-    padding-top: 6px;
-    padding-left: 4px;
-    font-weight: 500;
-}
-
-.btn_certification, .btn_businessNum {
-    cursor: pointer;
-    outline: none;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-
-    width: 120px;
-    border: 1px solid #FF773D;
-    border-radius: 20px;
-}
-.btn_certification > span, .btn_businessNum > span {
-    line-height: 40px;
-    color: #FF773D;
-    font-size: 16px;
-}
-
-.btn-login {
-    cursor: pointer;
-    outline: none;
-    padding: 0;
-    margin-bottom: 16px;
-    border: none;
-    background-color: transparent;
-
-    width: 432px;
-    background: #FF773D;
-    border-radius: 25px;
-}
-.btn-login > span {
-    line-height: 50px;
-    text-align: center;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
-.login__find-wrap {
-    width: 162px;
+    padding: 65px 34px 48px 34px;
     margin: 0 auto;
-    padding-bottom: 40px;
+    box-sizing: border-box;
 }
-.login__find-wrap::after { content: ""; display: block; clear: both; }
-.login__find {
-    display: block;
-    color: #909090;
-    font-size: 14px;
-    float: left;
-}
-.login__find.id {
-    width: 66px;
-    margin-right: 16px;
-}
-.login__find.password { width: 80px; }
-
-
-.login__join-wrap {
+.contetns__main-icons {
     text-align: center;
 }
-.login__join-wrap > a {
-    text-decoration: none;
-    color: #303030;
-    font-size: 16px;
+.contetns__main-icons > li {
+    width: 20%;
+    padding: 0 20px;
+    display: inline-block;
+}
+.contetns__main-icons > li > a {
+    display: block;
+    line-height: 48px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Youth';
+    font-size: 24px;
     font-weight: 500;
+    color: #303030;
+    text-decoration: none;
 }
-.login__join-wrap > a > span > strong {
-    color: #FF773D;
-    font-weight: 700;
-}
-
-.login__terms-wrap::after { content: ""; display: block; clear: both; }
-.login__terms__btn {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-
-    width: 50%;
-    float: left;
-}
-.login__terms__btn > span {
-    color: #909090;
-    font-size: 14px;
-    line-height: 50px;
-    text-align: center;
-}
-.login__terms__btn.bar { position: relative; }
-.login__terms__btn.bar::after {
-    content: "";
+.contetns__main-icons > li > a > span{
     display: block;
-
-    position: absolute;
-    top: 12px;
-    bottom: 12px;
-    right: 1px;
-    width: 1px;
-    background-color: #ccc;
+    width: 100%;
+    height: 200px;
+    border-radius: 48px;
 }
 
+.contetns__main-icons > li:nth-child(1) > a > span {
+    background: url("../images/icon_motel.png") center no-repeat;
+    background-size: 172px;
+}
+.contetns__main-icons > li:nth-child(2) > a > span {
+    background: url("../images/icon_hotel.png") center no-repeat;
+    background-size: 172px;
+}
+.contetns__main-icons > li:nth-child(3) > a > span {
+    background: url("../images/icon_cottage.png") center no-repeat;
+    background-size: 172px;
+}
+.contetns__main-icons > li:nth-child(4) > a > span {
+    background: url("../images/icon_sharehouse.png") center no-repeat;
+    background-size: 172px;
+}
+
+.contetns__main-icons > li:hover > a > span {
+    background-color: #FFF6EA;
+    transform: scale(1.03);
+    transition-duration: 0.5s;
+}
 
 /* 푸터 영역 */
 .footer {
@@ -474,6 +350,7 @@ button, input, select, textarea {
         right:6px;
         background:#FF773D;
     }
+
     .header_wrap { position: relative; }
     .logo {
         position: absolute;
@@ -488,5 +365,35 @@ button, input, select, textarea {
     }
     .header_wrap {
         height: 40px;
+    }
+    .contents {
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
+    .contents__slogan {
+        font-size: 1.5em;
+        line-height: 40px;
+    }
+    .contetns__main-icons {
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .contetns__main-icons > li {
+        display: block;
+        width: 80%;
+
+        background-color: #fff;
+        border-radius: 40px;
+
+        box-shadow: 0px 6px 20px 8px rgba(65,21,2,0.16)
+        , inset 1px 2px 10px 8px rgb(255, 255, 255);
+
+        padding: 32px;
+        margin: 0 auto 32px auto;
+    }
+    .contetns__main-icons > li:hover > a > span {
+        background-color: transparent;
+        transform: scale(1.01);
+        transition-duration: 0.2s;
     }
 }

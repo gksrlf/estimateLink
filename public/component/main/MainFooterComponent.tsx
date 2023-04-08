@@ -1,8 +1,7 @@
-import '../../css/reset.css';
-import '../../css/gyeonjeok_main.css';
+import style from '@style/gyeonjeok_main.module.css'
 
 const MainFooterComponent = () => {
-  return <footer className="footer" />;
-};
+  return <footer className="footer" />
+}
 
-export default MainFooterComponent;
+export default MainFooterComponent

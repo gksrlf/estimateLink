@@ -5,12 +5,13 @@
     "node": true
   },
   "extends": [
-    "eslint:recommended",
+    "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended"
+    "plugin:import/typescript"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -27,13 +28,16 @@
       {
         "endOfLine": "auto"
       }
-    ]
+    ],
+    "import/no-unresolved": "off"
   },
   "settings": {
     "import/resolve": {
       "node": {
+        "typescript": {},
         "extension": [".js", ".jsx", ".ts", ".tsx"],
-        "moduleDirectory": ["node_modules"]
+        "moduleDirectory": ["node_modules","src/"],
+        "webpack": {}
       }
     }
   }

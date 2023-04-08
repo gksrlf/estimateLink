@@ -671,8 +671,10 @@ button, input, select, textarea {
 }
 
 .write__completeBtn__wrap {
-    width: 425px;
+    width: 418px;
     margin: 0 auto;
+    font-size: 0;
+    line-height: 0;
 }
 .btn__complete {
     border: none;

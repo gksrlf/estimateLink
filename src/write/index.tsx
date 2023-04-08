@@ -1,5 +1,7 @@
-const Write = () => {
-  return <>gd</>;
-};
+import WriteContentComponent from '../../public/component/write/WriteContentComponent'
 
-export default Write;
+const Write = () => {
+  return <WriteContentComponent />
+}
+
+export default Write
